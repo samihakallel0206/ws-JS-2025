@@ -135,7 +135,7 @@
 // console.log("je m'appelle sam");
 
 //******!String methods & properties **** */
-// var s = "Hello World";
+var s = "Hello World";
 // var val;
 // console.log(val);
 // console.log(typeof val);
@@ -159,8 +159,8 @@
 // console.log(val)
 
 // Split into array
-// val = s.split('') //result array
-// console.log(val)
+val = s.split(' ') //result array
+console.log(val)
 // val=[1,4,5]
 // val = val.join('')// array ----> string
 // console.log(val)

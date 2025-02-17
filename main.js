@@ -1,7 +1,7 @@
-// alert("Bonjour JS!");
+// alert("Bonjour les amis!");
 // ***************!Journalisation de sortie & Console
-//  alert("Hello World"); // Ne pas utiliser pour le débogage!!!
-// console.log("bonjour je suis là");
+// alert("Hello World"); // Ne pas utiliser pour le débogage!!!
+// // console.log("bonjour je suis là");
 // console.error("Ceci est une erreur");
 // console.warn("Ceci est un avertissement");
 // console.log(prompt("âge"));
@@ -10,26 +10,28 @@
 
 // var name = "student"; // déclaration d'une variable
 // console.log(name);
-// var name = "instructor"; // réassignation avec `var`
+var name = 10; // réassignation avec `var`
 // console.log(name);
 
 // const name = "Foulen";
 // const age = 99;
 // console.log(age);
 // `var` peut être réassigné, mais `const` ne peut pas
+// var name;
 // name = "foulani";
+// console.log(name);
 // age = 100;
 // console.log(age);
 
 //*****************************************!Types de données
 
-// var name = "a";
+// var name = "ahfgdhdh";
 // console.log(typeof name);
 // var age = 260;
 // console.log(typeof age);
 // var tallness = 1.75;
 // console.log(typeof tallness);
-// var isPerson = false;
+// var isPerson = true;
 // console.log(typeof isPerson);
 // var x = null;
 // console.log(typeof x);
@@ -46,17 +48,21 @@
 // console.log("10" / "2");
 // console.log(10 % 2);
 // console.log(10 % 3);
-// console.log("3" ** "2");
+// console.log("3" ** "2"); //la puissance
 // console.log(5 + 3);
-// console.log(5 + "a");
+// console.log(5 + "a" + "agfertf"); //concaténation
 // var y = 5;
 // console.log(++y);
 // console.log(y);
 // console.log(y++);
 // console.log(y);
 // var z;
+// console.log(z);
 // z = ++y;
 // console.log(z);
+// console.log(y);
+// var t = y++;
+// console.log(t);
 // console.log(y);
 
 //******************!Opérateurs de comparaison
@@ -72,27 +78,27 @@
 
 // /!== compare l'inégalité des valeurs et des types
 
-// var a = 25;
+// var a = 25; //affectation
 // var b = "25";
 // console.log(typeof a);
 // console.log(typeof b);
-// if (a !== b) {
+// if (a === b) {
 //   console.log(a + " est égal en valeur et en type à " + b);
 // } else {
 //   console.log("pas égal en type ou en valeur");
 // }
-// if (a != b) {
+// if (a == b) {
 //   console.log("égal ");
 // } else {
 //   console.log("pas égal");
 // }
 
 //****************************!Truthy & Falsy
-// false, undefined, null, 0, "", NaN
+// false, undefined, null, 0, "", NaN//falsy
 
 // var test = null;
 // var title = "";
-// var y;
+// var y; //undefined
 // console.log(typeof y);
 // var a = 0;
 // console.log(test);
@@ -109,51 +115,66 @@
 // ***********************************!Opérateurs logiques
 // ********** X && Y : ET logique
 // Renvoie la première valeur fausse
+//renvoie la deuxieme valeur si première vraie
 // console.log(null && 5);
+//  a && b  =>
+//  f    f  f
+//  v    f  f
+//  f    v  f
+//  v    v  v
+
 // console.log(5 && 1);
 
 // ********** X || Y : OU logique
 // Renvoie la première valeur vraie
-// console.log(1 || 0);
+// console.log("" || 0);
+//  a || b  =>
+//  f    f  f
+//  v    f  v
+//  f    v  v
+//  v    v  v
 
 //***************!Concaténation de chaînes
 // var name = "hamza";
 // var age = 20;
 
-// Méthode archaïque
+// // Méthode archaïque traditionnelle
 // console.log("Je m'appelle " + name + "\n" + "et j'ai " + age + " ans");
 
-// Littéraux de gabarit (utilisez ça!)
+// // Littéraux de gabarit (utilisez ça!)
 // console.log(`Je m'appelle ${name}
-//     et j'ai
+//     et
+//     j'ai
 //      ${2 + 3} ans`);
-//``:backteks (altGr + 7)
-//Caractères spéciaux (\, \', \n, \\)
+// //``:backteks (altGr + 7)
+// //Caractères spéciaux (\, \', \n, \\)
 
-// console.log("je m'appelle sam");
+// console.log('je m"appelle sam');
 
 //******!Méthodes et propriétés des chaînes de caractères **** */
-// var s = "Hello World";
+// var s = "Hello World of JS";
 // var val;
 // console.log(val);
 // console.log(typeof val);
 
-// Obtenir la longueur
+// // Obtenir la longueur
 // val = s.length;
 // console.log(s.length);
 // console.log(val);
 
-// Index des chaînes
+// // Index des chaînes
 // console.log(s[0]);
+// console.log(s[s.length - 1]);
 
 // Changer la casse
+// j === J? //différent
 // val = s.toUpperCase();
 // console.log(val);
 // val = s.toLowerCase();
 // console.log(val);
-
-// Extraire une sous-chaîne
-// val = s.substring(1, 5);
+// var s = "Hello World of JS";
+// // Extraire une sous-chaîne
+// val = s.substring(5, 10);
 // console.log(val);
 // var s = "Hello World";
 // // Diviser en tableau
@@ -170,21 +191,21 @@
 // console.log(val);
 
 //*****************!Switch (/!\break) */
-var color = "rouge";
+// var color = "noire";
 // switch (color) {
 //   case "rouge":
 //     console.log("La couleur est rouge");
-//   break;
+//     break;
 //   case "bleue":
 //     console.log("La couleur est bleue");
-//   break;
+//     break;
 //   case "jaune":
 //     console.log("La couleur est jaune");
 //     break;
 //   default:
 //     console.log("La couleur n'est ni rouge ni bleue ni jaune");
 // }
-// Reproduction avec if/else
+// // Reproduction avec if/else
 // if (couleur === "rouge") {
 //   console.log("La couleur est rouge");
 // } else if (couleur === "bleue") {
@@ -197,9 +218,10 @@ var color = "rouge";
 // ************!FONCTIONS (en tant que type)
 // Déclaration de fonction
 // function dummyFunc() {
-// return }
+//   return;
+// }
 
-// Vérification du type
+// // Vérification du type
 // console.log(typeof dummyFunc);
 
 //************      Fonctions       */
@@ -217,12 +239,14 @@ var color = "rouge";
 // function soustraction(g, h) {
 //   return g - h;
 // }
-// var résultat = soustraction(8, 10);
+// var résultat = soustraction("5", "10");
 // console.log(résultat);
 // console.log(soustraction(4, 3));
 // console.log(soustraction("600a", 326587));
-
-// console.log(soustraction(y, x)); //il faut déclarer ses var
+//
+// var x = 10;
+// var y = 3;
+// console.log(soustraction(x, y)); //il faut déclarer ses var
 
 // function addition(g, h) {
 //   return g + h;
@@ -239,11 +263,11 @@ var color = "rouge";
 // const x = "10";
 
 // if (x === 10) {
-//   console.log("x est égal à 10");
+//   console.log("x est égal à 10"); //❌
 // } else if (x > 10) {
-//   console.log("x est supérieur à 10");
+//   console.log("x est supérieur à 10"); //❌
 // } else {
-//   console.log("x est inférieur à 10");
+//   console.log("x est inférieur à 10");//sortie n'est valable
 // }
 
 //*********************!! Boucles
@@ -252,40 +276,44 @@ var color = "rouge";
 //   console.log("Numéro de la boucle For : " + i);
 // }
 
-var tab = [1, "p", "bonjour", true];
-// // // Boucle décroissante
-// for (var i = tab.length - 1; i >= 0; i--) {
+// var tab = [1, "p", "bonjour", true];
+// // Boucle décroissante
+// for (var i = 0; i < tab.length; i++) {
 //   console.log(i);
-//     console.log(tab[i]);
+//   console.log(tab[i]);
+// }
+// for (var i = tab.length - 1; i >= 0; --i) {
+//   console.log(i);
+//   console.log(tab[i]);
 // }
 
 /*    for ... of   */
-// for (var el of tab) {
+// for (var element of tab) {
 //   /// valeur ou élément
-//   console.log(el);
+//   console.log(element);
 // }
-/*       for ... in       */
+// /*       for ... in       */
 // for (var i in tab) {
 //   // index
 //   console.log(i);
-//     console.log(tab[i]);
+//   console.log(tab[i]);
 // }
 
 //*********************! While
-// var l = 8;
+// var l = 10;
 // while (l <= 5) {
 //   console.log("hola");
 //   // Affiche "hola" tant que l < 5
-//   //   console.log(l);
-//   l++;
-//   //   console.log(l);
+//   console.log(l);
+//   l++; //changement
+//   console.log(l);
 // }
 
-// var i = 1;
+// var i = 0;
 // do {
 //   console.log(`Numéro de la boucle Do While : ${i}`);
 //   i++;
-// } while (i < -5);
+// } while (i <= 5);
 
 // ************! TABLEAUX - Stocker plusieurs valeurs dans une variable
 // var numbers = [1, 2, 3, 4, 5];
@@ -300,65 +328,67 @@ var tab = [1, "p", "bonjour", true];
 // *** Modification des tableaux
 // const numbers = [1, 2, 3];
 // console.log(numbers);
-// // Une nouvelle affectation
+// // // Une nouvelle affectation
 // numbers[1] = "bonjour"; // Remplace l'élément à l'index 1
 // console.log(numbers);
 
 //********************! Méthodes et propriétés des tableaux
 // const colors = ["noir", "blanc", "rouge", "bleu"];
+// var x = "Bonjour";
 // console.log(colors);
 
 // // Obtenir la longueur
 // console.log(colors.length);
 
-// // Obtenir une valeur (!: Les index commencent à 0)
+// // // Obtenir une valeur (!: Les index commencent à 0)
 // console.log(colors[2]);
 
-// // Ajouter une valeur avec push()
+// // // Ajouter une valeur avec push()
 // colors.push("jaune");
 // console.log(colors);
 
-// // Ajouter une valeur au début
+// // // Ajouter une valeur au début
 // colors.unshift("violet");
 // console.log(colors);
 
-// // Supprimer la dernière valeur
+// // // Supprimer la dernière valeur
 // colors.pop();
 // console.log(colors);
 
-// // Supprimer la première valeur
+// // // Supprimer la première valeur
 // colors.shift();
 // console.log(colors);
 
 // // Vérifier si c’est un tableau
 // console.log(Array.isArray(colors));
+// console.log(Array.isArray(x));
 
 // // Obtenir un index
 // console.log(colors.indexOf("rouge"));
 
 // **********************! Parcourir des tableaux
-// Tableau d'objets
+// // Tableau d'objets
 // const numbers = [22, 55, 66];
 
-// // ********************** Boucle For
+// // // ********************** Boucle For
 // for (var i = 0; i < numbers.length; i++) {
 //   console.log(numbers[i]);
 // }
 
-// // ********************** Boucle For...of
+// // // ********************** Boucle For...of
 // for (var x of numbers) {
 //   console.log(x);
 // }
 
-// // ********************** Boucle For...in
+// // // ********************** Boucle For...in
 // for (var i in numbers) {
 //   console.log(numbers[i]);
 // }
 
 // ************! OBJETS
 // const person = {
-//   name: "Eve",
-//   age: 5000,
+//   name: "Emna",
+//   age: 20,
 //   isPerson: true,
 //   hobbies: ["manger", "dormir"],
 // };
@@ -366,6 +396,8 @@ var tab = [1, "p", "bonjour", true];
 // console.log(person);
 // console.log(typeof person);
 // console.log(person.name);
+// console.log(person.age);
+// console.log(person.hobbies[0]);
 
 //****************************!Objets
 // const person = {
@@ -379,12 +411,13 @@ var tab = [1, "p", "bonjour", true];
 //     state: "quelque part",
 //   },
 // };
-
-// // Obtenir une seule valeur (obj.clé)
+// var x = [1, [2, 5, 4], 3];
+// console.log(x[1][2]);
+// // // Obtenir une seule valeur (obj.clé)
 // console.log(person.firstName);
 // console.log(person.address.street);
 
-// // Ajouter une propriété
+// // // Ajouter une propriété
 // person.email = "adam@gmail.com";
 // console.log(person);
 // person.hobbies.push("chanter");
@@ -401,34 +434,34 @@ var tab = [1, "p", "bonjour", true];
 
 // // Modifier une propriété
 // person.name = "mohamed";
-// // console.log(person);
+// console.log(person);
 
-// // // Supprimer une propriété
+// // // // Supprimer une propriété
 // delete person.age;
 // console.log(person);
 
-// // // Ajouter une propriété
+// // // // Ajouter une propriété
 // person.email = "m@gmail.com";
 // console.log(person);
 
 // ************ /!\ Tableau d'objets
-const users = [
-  {
-    name: "personne",
-    age: 23,
-    email: "p1@gmail.com",
-  },
-  {
-    name: "personne 2",
-    age: 31,
-    email: "p2@gmail.com",
-  },
-  {
-    name: "personne 3",
-    age: 155,
-    email: "p3@gmail.com",
-  },
-];
+// const users = [
+//   {
+//     name: "personne",
+//     age: 23,
+//     email: "p1@gmail.com",
+//   },
+//   {
+//     name: "personne 2",
+//     age: 31,
+//     email: "p2@gmail.com",
+//   },
+//   {
+//     name: "personne 3",
+//     age: 155,
+//     email: "p3@gmail.com",
+//   },
+// ];
 
-console.table(users);
-console.log(users);
+// console.log(users);
+// console.table(users);
