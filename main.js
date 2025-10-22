@@ -13,15 +13,15 @@
 // var nom = "Ali";
 // console.log(nom);
 
-// nom = 10; // réassignation
+// nom = true; // réassignation
 // console.log("nom:", nom);
 
-// const prenom = "Foulen";
+// const person = "Foulen";
 // var age = 99;
 // // console.log(age);
 // // prenom = "Samiha";
 // // // var personne;
-// personne = "Foulani";
+// person= "Foulani";
 // console.log(personne);
 // age = 100;
 // console.log(age);
@@ -52,6 +52,7 @@
 // console.log("3" ** "2");
 // console.log("5" + 2);
 // console.log(typeof (5 + "a"));
+// console.log((5 + "a"));
 // console.log(typeof ("" + 125));
 // var y = 5;
 // console.log(++y);
@@ -61,7 +62,7 @@
 // ! OPÉRATEURS DE COMPARAISON
 // var a = 25;
 // var b = "25";
-// // console.log(typeof a, typeof b);
+// console.log(typeof a, typeof b);
 
 // if (a === b) {
 //   //comparaison contenu et type ====
@@ -72,7 +73,7 @@
 // } else {
 //   console.log("Pas égal");
 // }
-// console.log(a !== b);
+// console.log(a != b);
 //=================================================
 // toDO:resume
 // = affectation d'une vvaleur à une variable
@@ -103,20 +104,20 @@
 
 //!OPÉRATEURS LOGIQUES
 
-// // && → ET, || → OU, ! → NON
+// && → ET, || → OU, ! → NON
 // console.log(null && 5); //premier TRUE afficher le deuxieme
-// // a b     a && b
-// // 0 0       0
-// // 0 1       0
-// // 1 0       0
-// // 1 1       1
-// console.log(0 && 1);
+// a b     a && b
+// 0 0       0
+// 0 1       0
+// 1 0       0
+// 1 1       1
+// console.log("abc" && 1); //premier faux afficher le premier
 // // a b     a || b
 // // 0 0       0
 // // 0 1       1
 // // 1 0       1
 // // 1 1       1
-// console.log("" || 7); //premier faux afficher le premier
+// console.log("" || 7);
 // console.log(true || 4);
 // console.log(!false);
 
@@ -124,36 +125,41 @@
 
 // var nom2 = "Hamza";
 // var age2 = 20;
-// console.log("je m'appelle " + nom2);
-// console.log('je mappelle "sam"');
-// // // es6
+// console.log("je "+ "\n"+ " m'appelle " + nom2);
+// // console.log('je mappelle "sam"');
+// // // // es6
 // console.log(`Je m'appelle
+
 //     ${nom2}
 //     et j'ai ${age2}
 //     ans`);
+// "" '' ``
 // ` ` Alt GR +7
 //!MÉTHODES DES CHAÎNES
 
 // var s = "Hello World of JS";
 // console.log(s.length);
-// console.log(s[0]);
+// console.log(s[5]);
 
 // console.log(s[s.length - 1]);
 // console.log(s.toUpperCase());
 // console.log(s.toLowerCase());
 // console.log(s.substring(2, 10));
-// console.log(s.split(""));
+// console.log(s.split(" "));
 // console.log(["H", "i"].join(""));
 
 //! CONDITIONS ET BOUCLES
 
 //--------------If else /Switch------------
 // const x2 = 10;
-// if (x2 == 10) console.log("x est égal à 10");
-// else if (x2 > 10) console.log("x > 10");
-// else console.log("x < 10");
+// if (x2 == 10) {
+//   console.log("x est égal à 10");
+// } else {
+//   if (x2 > 10) console.log("x > 10");
+//   else console.log("x < 10");
+// }
 
-// var color = "jaune";
+// var color = "bleue";
 // switch (color) {
 //   case "rouge":
 //     console.log("La couleur est rouge");
@@ -181,7 +187,7 @@
 
 // for (var i = 0; i < tab.length; i++) console.log(tab[i]);
 
-// for (var el of tab) console.log(el);
+// for (var element of tab) console.log(element);
 // for (var i in tab) console.log(tab[i]);
 
 // ---------------- While & Do While ----------------
@@ -198,10 +204,10 @@
 
 //!FONCTIONS
 // function salutation(n) {
-//   //   console.log("object");
+//   // console.log("moi");
 //   return `Bonjour, je m'appelle ${n}`;
 // }
-// console.log(salutation("Sam"));
+// // console.log(salutation());
 // console.log(salutation("Nessrine"));
 
 // function soustraction(g, h) {
@@ -217,16 +223,18 @@
 //! TABLEAUX
 
 // var numbers = [1, 2, 3, 4, 5];
+
 // var fruits = ["pommes", "oranges", "poires", "raisins"];
 // console.log(numbers);
 // console.log(typeof numbers);
 // console.log(numbers[1]);
-// // // Modifier un élément
+// // // // Modifier un élément
 // numbers[0] = "bonjour";
 // console.log(numbers);
 
-// // Méthodes utiles
+// // // Méthodes utiles
 // const colors = ["noir", "blanc", "rouge", "bleu"];
+// const colors= 'abcde'
 // colors.push("jaune");
 // console.log(colors);
 // colors.unshift("violet");
@@ -236,46 +244,56 @@
 // colors.shift();
 // console.log(colors);
 // console.log(Array.isArray(colors));
-// console.log(colors.indexOf("rouge"));
+// console.log(colors.indexOf("roug"));
 
-// *** Objets
-const person = {
-  name: "foulan",
-  age: 27,
-  adresse: "Tunis",
-};
-console.log(person);
+//!Objets
+// const person = {
+//   name: "foulan",
+//   age: 27,
+//   adresse:{
+//     city: "tunis",
+//     codePostal:2049
+//   },
+// };
+// console.log(person);
 
-// Modifier une propriété
-person.name = "mohamed";
-console.log(person);
+// // // Modifier une propriété
+// person.adresse.city = "Ariana";
+// console.log(person);
 
-// Supprimer une propriété
-delete person.age;
-console.log(person);
+// // // Supprimer une propriété
+// delete person.age;
+// console.log(person);
 
-// Ajouter une propriété
-person.email = "m@gmail.com";
-console.log(person);
+// // // Ajouter une propriété
+// person.email = "m@gmail.com";
+// console.log(person);
 
-// ************ /!\ Tableau d'objets
-const users = [
-  {
-    name: "personne",
-    age: 23,
-    email: "p1@gmail.com",
-  },
-  {
-    name: "personne 2",
-    age: 31,
-    email: "p2@gmail.com",
-  },
-  {
-    name: "personne 3",
-    age: 155,
-    email: "p3@gmail.com",
-  },
-];
+// // // ************ /!\ Tableau d'objets
+// const users = [
+//   {
+//     name: "personne",
+//     age: 23,
+//     email: "p1@gmail.com",
+//   },
+//   {
+//     name: "personne 2",
+//     age: 31,
+//     email: "p2@gmail.com",
+//   },
+//   {
+//     name: "personne 3",
+//     age: 155,
+//     email: "p3@gmail.com",
+//   },
+// ];
 
-console.log(users);
-console.table(users);
+// console.log(users);
+// console.table(users);
+
+// // function add(a, b) {
+// //   return a + b;
+// // }
+
+// // console.log(typeof (add))
+// // console.log(add)
